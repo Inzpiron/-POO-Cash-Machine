@@ -7,10 +7,6 @@ package caixa.eletrônico.poo;
 
 import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Vector;
 
 
 public class GUI extends javax.swing.JFrame {
@@ -346,7 +342,7 @@ public class GUI extends javax.swing.JFrame {
                    GUI.State = 2;
                    GUI.accountPin  = entry;
                    GUI.entry = "";
-                   Controller.Transiction.accountNumber = GUI.accountNumber;
+                   Controller.Transaction.accountNumber = GUI.accountNumber;
                    GUI.ConsoleActualText = GUI.ConsoleText[2];
                    AtualizeConsole();
                 } else {

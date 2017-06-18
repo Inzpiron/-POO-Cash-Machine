@@ -6,26 +6,25 @@
 package caixa.eletrônico.poo;
 
 import static caixa.eletrônico.poo.GUI.entry;
-import javax.swing.JOptionPane;
 
 public class Controller {
-    public static class Transiction{
+    public static class Transaction{
         public static String accountNumber;
         public static String getAccountNumber(){
-            return Transiction.accountNumber;
+            return Transaction.accountNumber;
         }
     }
     
-    public static class BalanceInquiry extends Transiction{
+    public static class BalanceInquiry extends Transaction{
         public static boolean execute(){
-            if(Transiction.getAccountNumber() != null){
-                Transiction.getAccountNumber();
+            if(Transaction.getAccountNumber() != null){
+                Transaction.getAccountNumber();
                 return true;
             } else return false;
         }
     }
     
-    public static class WithDraw extends Transiction{
+    public static class WithDraw extends Transaction{
         private static float amount;
         
         public static void setAmount(float tmp){
@@ -34,7 +33,7 @@ public class Controller {
         
         public static boolean execute(){
             for(User usr : DataBase.UserDataBase){
-                if(usr.GetAccountNumber().equals(Transiction.getAccountNumber())){
+                if(usr.GetAccountNumber().equals(Transaction.getAccountNumber())){
                     if(amount <= usr.GetAccountBalance()){
                         usr.IncrementBalance(-amount);
                         return true;
@@ -46,7 +45,7 @@ public class Controller {
         }
     }
     
-    public static class Deposit extends Transiction{
+    public static class Deposit extends Transaction{
         public static float amount;
         
         public static void setAmount(float tmp){
@@ -55,7 +54,7 @@ public class Controller {
         
         public static boolean execute(){
             for(User usr : DataBase.UserDataBase){
-                if(usr.GetAccountNumber().equals(Transiction.getAccountNumber())){
+                if(usr.GetAccountNumber().equals(Transaction.getAccountNumber())){
                     try{
                         usr.IncrementBalance(amount); //Incrementando amount  no balanço atual
                     }catch(Exception e){
