@@ -504,7 +504,7 @@ public class GUI extends javax.swing.JFrame {
         ConsoleText[0] = "WELCOME!\n\nEnter your credentials:\n  -Account number: ";
         ConsoleText[1] = "WELCOME!\n\nEnter your credentials:\n  -Account number: " + GUI.accountNumber + "\n  -Account Pin code: ";
         ConsoleText[2] = "WELCOME " + accountName + "\n\nMain menu:\n  1. View my balance\n  2. Withdraw cash\n  3. Deposit funds\n  4. Exit\nEnter a choice: ";
-        ConsoleText[3] = "Your Account balance is: " + GUI.accountBalance + "\n\n\n\n\nPress GO to back...";
+        ConsoleText[3] = "Your Account balance is: " + String.format("%.2f", GUI.accountBalance) + "\n\n\n\n\nPress GO to back...";
         ConsoleText[4] =    "Withdraw menu:\n"
                           + "  1- $20    2- $40\n"
                           + "  3- $60    4- $100\n"
