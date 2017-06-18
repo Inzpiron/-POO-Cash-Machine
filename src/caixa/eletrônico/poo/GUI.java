@@ -14,20 +14,20 @@ import java.util.Vector;
 
 
 public class GUI extends javax.swing.JFrame {
-    public static int nextState = 0;
-    public static String entry = "";
-    public static float  accountBalance = 0;
-    public static String accountNumber = "";
-    public static String accountPin = "";
-    public static String accountName = "";
-    public static int State = 0;
-    public static String[] ConsoleText = new String[10];
-    public static String ConsoleActualText = "WELCOME!\n\nEnter your credentials:\n  -Account number: ";
-    public static String nextStateText;
-    public static int DepositCursor = 2;
-    public static float depositAmount;
-    public long start;
-    public long finish;
+    private static int nextState = 0;
+    private static String entry = "";
+    private static float  accountBalance = 0;
+    private static String accountNumber = "";
+    private static String accountPin = "";
+    private static String accountName = "";
+    private static int State = 0;
+    private static String[] ConsoleText = new String[10];
+    private static String ConsoleActualText = "WELCOME!\n\nEnter your credentials:\n  -Account number: ";
+    private static String nextStateText;
+    private static int DepositCursor = 2;
+    private static float depositAmount;
+    private long start;
+    private long finish;
     
     /**
      * Creates new form GUICashMachine
