@@ -5,8 +5,6 @@
  */
 package caixa.eletrônico.poo;
 
-import static caixa.eletrônico.poo.GUI.entry;
-
 public class Controller {
     public static class Transaction{
         public static String accountNumber;
@@ -67,11 +65,11 @@ public class Controller {
     
     public static boolean verifyAccountPin(String pinCode){
         for(User UserDataBase : DataBase.UserDataBase){
-            if(UserDataBase.GetAccountNumber().equals(GUI.accountNumber)){
+            if(UserDataBase.GetAccountNumber().equals(Main.mainGUI.getAccountNumber())){
                 if(UserDataBase.GetPinCode().equals(pinCode)){
-                    GUI.accountName = UserDataBase.GetAccountName();
-                    GUI.accountBalance = UserDataBase.GetAccountBalance();
-                    return true;   
+                    Main.mainGUI.setAccountName(UserDataBase.GetAccountName());
+                    Main.mainGUI.setAccountBalance(UserDataBase.GetAccountBalance());
+                    return true;
                 }
             }
         }
@@ -81,9 +79,9 @@ public class Controller {
     
     public static boolean verifyAccountNumber(){
         for (User UserDataBase : DataBase.UserDataBase) {
-            if (UserDataBase.GetAccountNumber().equals(entry)) {
-                GUI.accountName = UserDataBase.GetAccountName();
-                GUI.accountBalance = UserDataBase.GetAccountBalance();
+            if (UserDataBase.GetAccountNumber().equals(Main.mainGUI.getEntry())) {
+                Main.mainGUI.setAccountName(UserDataBase.GetAccountName());
+                Main.mainGUI.setAccountBalance(UserDataBase.GetAccountBalance());
                 return true;
             }
         }

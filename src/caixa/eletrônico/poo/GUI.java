@@ -25,6 +25,26 @@ public class GUI extends javax.swing.JFrame {
     private long start;
     private long finish;
     
+    public String getEntry()
+    {
+        return this.entry;
+    }
+    
+    public String getAccountNumber()
+    {
+        return this.accountNumber;
+    }
+    
+    public void setAccountName(String accName)
+    {
+        this.accountName = accName;
+    }
+    
+    public void setAccountBalance(float newBalance)
+    {
+        this.accountBalance = newBalance;
+    }
+    
     /**
      * Creates new form GUICashMachine
      */
@@ -447,7 +467,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonEnter1ActionPerformed
 
     private void ButtonTakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTakeActionPerformed
-        JOptionPane.showMessageDialog(this, "Cash taked from Dispenser");
+        JOptionPane.showMessageDialog(this, "Cash taken from Dispenser");
         ButtonTake.setEnabled(false);
         ConsoleActualText = ConsoleText[2];
         GUI.State = 2;
@@ -490,7 +510,7 @@ public class GUI extends javax.swing.JFrame {
                           + "  3- $60    4- $100\n"
                           + "  5- $200   6- Cancel Transation\n"
                           + "Choose an withdraw amount: ";
-        ConsoleText[5] = "Transiction sucess!\n\n\n\nTake your Cash on dispenser";
+        ConsoleText[5] = "Transaction sucessful!\n\n\n\nTake your Cash from the dispenser";
         ConsoleText[6] = "Deposit menu:\n\n\n"
                         +"Insert a value to deposit: ";
         ConsoleText[7] = "Deposit menu:\n\n\n\nInsert your mailer on Deposit";
